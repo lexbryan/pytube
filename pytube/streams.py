@@ -202,6 +202,8 @@ class Stream(object):
                 self.on_progress(chunk, fh, bytes_remaining)
             self.on_complete(fh)
 
+        return self.default_filename
+
     def on_progress(self, chunk, file_handler, bytes_remaining):
         """On progress callback function.
 
